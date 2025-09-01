@@ -34,4 +34,8 @@ public class AccountManager {
     public Set<UserAccount> getUserAccounts() {
         return userAccounts;
     }
+
+    public int getNumUsers(){
+        return this.numUsers;
+    }
 }
