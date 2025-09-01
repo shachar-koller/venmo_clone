@@ -6,7 +6,7 @@ public class AccountManager {
 
     private int numUsers;
     private Set<Integer> allIds = new HashSet<>();
-    private Set<UserAccount> userAccounts;
+    private final Set<UserAccount> userAccounts;
     Random random = new Random();
 
     public AccountManager() {
@@ -29,5 +29,9 @@ public class AccountManager {
         this.numUsers++;
         this.userAccounts.add(userAccount);
         return true;
+    }
+
+    public Set<UserAccount> getUserAccounts() {
+        return userAccounts;
     }
 }

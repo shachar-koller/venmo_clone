@@ -2,7 +2,7 @@ public class UserAccount {
     private String username;
     private int userid;
     private int accountBalance;
-    private AccountManager accountManager;
+    private final AccountManager accountManager;
 
     public UserAccount(String username, int userid, int accountBalance, AccountManager accountManager) {
         this.username = username;
@@ -86,6 +86,12 @@ public class UserAccount {
             receiver.receiveMoney(amount);
             return true;
         }
+    }
+
+    public String changeUserName(String newUsername){
+        String old = this.getUsername();
+        this.username = newUsername;
+        return old;
     }
 
     @Override
